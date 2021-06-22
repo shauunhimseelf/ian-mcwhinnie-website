@@ -646,6 +646,95 @@
             "time": "2020-04-16T08:04:26+00:00"
         },
         {
+            "name": "jeremykendall/php-domain-parser",
+            "version": "5.7.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jeremykendall/php-domain-parser.git",
+                "reference": "a2f61eb1fa1ebe0ea67a64b5d631495c304a189b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jeremykendall/php-domain-parser/zipball/a2f61eb1fa1ebe0ea67a64b5d631495c304a189b",
+                "reference": "a2f61eb1fa1ebe0ea67a64b5d631495c304a189b",
+                "shasum": ""
+            },
+            "require": {
+                "ext-intl": "*",
+                "ext-json": "*",
+                "php": "^7.2.5 || ^8.0",
+                "psr/log": "^1.1",
+                "psr/simple-cache": "^1.0.1"
+            },
+            "require-dev": {
+                "composer/composer": "^1.6 || ^2.0",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "mikey179/vfsstream": "^1.6.7",
+                "phpstan/phpstan": "^0.12",
+                "phpstan/phpstan-phpunit": "^0.12",
+                "phpstan/phpstan-strict-rules": "^0.12",
+                "phpunit/phpunit": "^8.0 || ^9.3"
+            },
+            "suggest": {
+                "ext-curl": "To use the package http client",
+                "league/uri": "To parse URL and validate host",
+                "psr/simple-cache-implementation": "To enable using other cache providers"
+            },
+            "bin": [
+                "bin/update-psl"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Pdp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jeremy Kendall",
+                    "homepage": "http://about.me/jeremykendall",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Ignace Nyamagana Butera",
+                    "homepage": "http://nyamsprod.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Contributors",
+                    "homepage": "https://github.com/jeremykendall/php-domain-parser/graphs/contributors"
+                }
+            ],
+            "description": "Public Suffix List based URL parsing implemented in PHP.",
+            "homepage": "https://github.com/jeremykendall/php-domain-parser",
+            "keywords": [
+                "PSL",
+                "Public Suffix List",
+                "Top Level Domains",
+                "domain parsing",
+                "iana",
+                "icann",
+                "idn",
+                "tld"
+            ],
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/nyamsprod",
+                    "type": "github"
+                }
+            ],
+            "time": "2020-10-26T06:41:32+00:00"
+        },
+        {
             "name": "masterexploder/phpthumb",
             "version": "dev-master",
             "source": {
@@ -744,12 +833,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/common.git",
-                "reference": "d54a1c75eff46113400bb03a5d45fc4f4f9b97d4"
+                "reference": "f1015079e4ae3f078c3513c6994bdcb205a8d263"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/common/zipball/d54a1c75eff46113400bb03a5d45fc4f4f9b97d4",
-                "reference": "d54a1c75eff46113400bb03a5d45fc4f4f9b97d4",
+                "url": "https://api.github.com/repos/nails/common/zipball/f1015079e4ae3f078c3513c6994bdcb205a8d263",
+                "reference": "f1015079e4ae3f078c3513c6994bdcb205a8d263",
                 "shasum": ""
             },
             "require": {
@@ -765,14 +854,16 @@
                 "ext-mbstring": "*",
                 "ext-pdo": "*",
                 "guzzlehttp/guzzle": "7.*",
+                "jeremykendall/php-domain-parser": "^5.6",
                 "mustache/mustache": "2.*",
-                "php": ">=7.3",
+                "php": "^7.3",
                 "pimple/pimple": "3.*",
                 "ralouphie/getallheaders": "3.*",
                 "symfony/http-foundation": "^5.0",
                 "symfony/mime": "5.*"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -849,105 +940,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-07-01T20:50:18+00:00"
-        },
-        {
-            "name": "nails/driver-cdn-local",
-            "version": "dev-develop",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/nails/driver-cdn-local.git",
-                "reference": "05d83e8e83eb5aec8a0d2184ab4559c83202a9eb"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/nails/driver-cdn-local/zipball/05d83e8e83eb5aec8a0d2184ab4559c83202a9eb",
-                "reference": "05d83e8e83eb5aec8a0d2184ab4559c83202a9eb",
-                "shasum": ""
-            },
-            "require-dev": {
-                "phpunit/phpunit": "9.*"
-            },
-            "type": "library",
-            "extra": {
-                "nails": {
-                    "name": "Local",
-                    "type": "driver",
-                    "subType": "storage",
-                    "forModule": "nails/module-cdn",
-                    "data": {
-                        "namespace": "Nails\\Cdn\\Driver\\",
-                        "class": "Local",
-                        "settings": [
-                            {
-                                "key": "path",
-                                "label": "Path",
-                                "info": "Where to store uploaded files; absolute path to relative to index.php",
-                                "default": "assets/uploads"
-                            },
-                            {
-                                "legend": "URLs",
-                                "fields": [
-                                    {
-                                        "key": "uri_serve",
-                                        "label": "Serving URI",
-                                        "default": "cdn",
-                                        "info": "Value will be passed into <code>site_url($value)</code>"
-                                    },
-                                    {
-                                        "key": "uri_serve_secure",
-                                        "label": "Serving URI (Secure)",
-                                        "default": "cdn",
-                                        "info": "Value will be passed into <code>site_url($value, true)</code>"
-                                    },
-                                    {
-                                        "key": "uri_process",
-                                        "label": "Processing URI",
-                                        "default": "cdn",
-                                        "info": "Value will be passed into <code>site_url($value)</code>"
-                                    },
-                                    {
-                                        "key": "uri_process_secure",
-                                        "label": "Processing URI (Secure)",
-                                        "default": "cdn",
-                                        "info": "Value will be passed into <code>site_url($value, true)</code>"
-                                    }
-                                ]
-                            }
-                        ]
-                    },
-                    "scripts": {
-                        "install": "./scripts/setup.sh"
-                    }
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Nails\\Cdn\\Driver\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Pablo de la Pena",
-                    "email": "p@nailsapp.co.uk",
-                    "homepage": "http://nailsapp.co.uk",
-                    "role": "Developer"
-                }
-            ],
-            "description": "This is the \"Local\" driver for the Nails CDN module.",
-            "homepage": "http://nailsapp.co.uk/modules/cdn/driver/awslocal",
-            "keywords": [
-                "CDN Module",
-                "Nails",
-                "Shed Collective",
-                "codeigniter",
-                "driver"
-            ],
-            "time": "2020-05-29T09:50:17+00:00"
+            "time": "2021-06-21T19:03:21+00:00"
         },
         {
             "name": "nails/driver-error-handler-default",
@@ -955,16 +948,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/driver-error-handler-default.git",
-                "reference": "2848cff4ef8c5ca263ef2d601166d150416c745a"
+                "reference": "c9a64f8eca6feda6e3da52cddd602cc2846340a9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/driver-error-handler-default/zipball/2848cff4ef8c5ca263ef2d601166d150416c745a",
-                "reference": "2848cff4ef8c5ca263ef2d601166d150416c745a",
+                "url": "https://api.github.com/repos/nails/driver-error-handler-default/zipball/c9a64f8eca6feda6e3da52cddd602cc2846340a9",
+                "reference": "c9a64f8eca6feda6e3da52cddd602cc2846340a9",
                 "shasum": ""
             },
             "require-dev": {
-                "phpunit/phpunit": "7.*"
+                "phpunit/phpunit": "9.*"
             },
             "type": "library",
             "extra": {
@@ -1005,7 +998,7 @@
                 "driver",
                 "errorhandler"
             ],
-            "time": "2020-06-03T16:51:14+00:00"
+            "time": "2021-05-26T10:19:55+00:00"
         },
         {
             "name": "nails/module-admin",
@@ -1013,12 +1006,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-admin.git",
-                "reference": "3bf0946384b285583b0815c0114c11626c6060f0"
+                "reference": "15bede74f2bd32f412b82d84edc92793b6b1eb64"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-admin/zipball/3bf0946384b285583b0815c0114c11626c6060f0",
-                "reference": "3bf0946384b285583b0815c0114c11626c6060f0",
+                "url": "https://api.github.com/repos/nails/module-admin/zipball/15bede74f2bd32f412b82d84edc92793b6b1eb64",
+                "reference": "15bede74f2bd32f412b82d84edc92793b6b1eb64",
                 "shasum": ""
             },
             "require": {
@@ -1030,6 +1023,7 @@
                 "nails/module-cron": "dev-develop"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -1082,7 +1076,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-07-01T21:50:52+00:00"
+            "time": "2021-06-16T08:58:49+00:00"
         },
         {
             "name": "nails/module-api",
@@ -1090,12 +1084,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-api.git",
-                "reference": "68cc0e3f3cdbfa3b07b69b234749489faf614f2b"
+                "reference": "d203dea8f5f777d7b7637466c64f8da082622002"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-api/zipball/68cc0e3f3cdbfa3b07b69b234749489faf614f2b",
-                "reference": "68cc0e3f3cdbfa3b07b69b234749489faf614f2b",
+                "url": "https://api.github.com/repos/nails/module-api/zipball/d203dea8f5f777d7b7637466c64f8da082622002",
+                "reference": "d203dea8f5f777d7b7637466c64f8da082622002",
                 "shasum": ""
             },
             "require": {
@@ -1104,6 +1098,7 @@
                 "nails/module-console": "dev-develop"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -1145,7 +1140,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-05-28T15:55:22+00:00"
+            "time": "2021-05-24T20:06:17+00:00"
         },
         {
             "name": "nails/module-asset",
@@ -1153,12 +1148,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-asset.git",
-                "reference": "6648598dd9be10030add6a2191628a1160aef743"
+                "reference": "a8a6ef9c95c155d9fe5d88103b07a7f896921294"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-asset/zipball/6648598dd9be10030add6a2191628a1160aef743",
-                "reference": "6648598dd9be10030add6a2191628a1160aef743",
+                "url": "https://api.github.com/repos/nails/module-asset/zipball/a8a6ef9c95c155d9fe5d88103b07a7f896921294",
+                "reference": "a8a6ef9c95c155d9fe5d88103b07a7f896921294",
                 "shasum": ""
             },
             "type": "library",
@@ -1167,6 +1162,11 @@
                     "moduleName": "asset",
                     "type": "module",
                     "namespace": "Nails\\Asset\\"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nails\\Asset\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1195,7 +1195,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-06-10T16:26:27+00:00"
+            "time": "2021-06-22T12:34:29+00:00"
         },
         {
             "name": "nails/module-auth",
@@ -1304,25 +1304,33 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-cdn.git",
-                "reference": "5d9bbbd7282527ac1bfb5429b231979df1456afe"
+                "reference": "03ef413306de94be920bd555a5cec44e91830be4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-cdn/zipball/5d9bbbd7282527ac1bfb5429b231979df1456afe",
-                "reference": "5d9bbbd7282527ac1bfb5429b231979df1456afe",
+                "url": "https://api.github.com/repos/nails/module-cdn/zipball/03ef413306de94be920bd555a5cec44e91830be4",
+                "reference": "03ef413306de94be920bd555a5cec44e91830be4",
                 "shasum": ""
             },
             "require": {
                 "masterexploder/phpthumb": "dev-master",
                 "nails/common": "dev-develop",
-                "nails/driver-cdn-local": "dev-develop",
+                "nails/module-api": "dev-develop",
                 "nails/module-auth": "dev-develop",
                 "nails/module-console": "dev-develop",
+                "nails/module-cron": "dev-develop",
                 "sybio/gif-creator": "~1.0.0",
                 "sybio/gif-frame-extractor": "~1.0.0"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
+            },
+            "suggest": {
+                "nails/driver-cdn-awslocal": "Use AWS S3 for file storage.",
+                "nails/driver-cdn-digital-ocean": "Use DigitalOcean Spaces for file storage.",
+                "nails/driver-cdn-google-cloud-storage": "Use Google Cloud Storage for file storage.",
+                "nails/driver-cdn-local": "Use the local file system for file storage."
             },
             "type": "library",
             "extra": {
@@ -1396,7 +1404,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-06-29T09:01:51+00:00"
+            "time": "2021-06-22T13:09:29+00:00"
         },
         {
             "name": "nails/module-console",
@@ -1404,12 +1412,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-console.git",
-                "reference": "7fa9144afea1350b652649930f0f6bda4ced01cf"
+                "reference": "27f2a290d193c9cb0b34c8e3738bfbfc054d0b3f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-console/zipball/7fa9144afea1350b652649930f0f6bda4ced01cf",
-                "reference": "7fa9144afea1350b652649930f0f6bda4ced01cf",
+                "url": "https://api.github.com/repos/nails/module-console/zipball/27f2a290d193c9cb0b34c8e3738bfbfc054d0b3f",
+                "reference": "27f2a290d193c9cb0b34c8e3738bfbfc054d0b3f",
                 "shasum": ""
             },
             "require": {
@@ -1417,6 +1425,7 @@
                 "symfony/console": "5.*"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -1453,7 +1462,7 @@
                 "cli",
                 "codeigniter"
             ],
-            "time": "2020-06-03T11:03:45+00:00"
+            "time": "2021-05-21T08:41:20+00:00"
         },
         {
             "name": "nails/module-cron",
@@ -1461,12 +1470,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-cron.git",
-                "reference": "95e5067e65b485fdd02b4353902d85bdb4ebb92d"
+                "reference": "3573ce6c425549a62a863d5f3fe79e57f3158cce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-cron/zipball/95e5067e65b485fdd02b4353902d85bdb4ebb92d",
-                "reference": "95e5067e65b485fdd02b4353902d85bdb4ebb92d",
+                "url": "https://api.github.com/repos/nails/module-cron/zipball/3573ce6c425549a62a863d5f3fe79e57f3158cce",
+                "reference": "3573ce6c425549a62a863d5f3fe79e57f3158cce",
                 "shasum": ""
             },
             "require": {
@@ -1475,6 +1484,7 @@
                 "nails/module-console": "dev-develop"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -1516,7 +1526,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-05-28T15:57:01+00:00"
+            "time": "2021-05-21T08:41:24+00:00"
         },
         {
             "name": "nails/module-email",
@@ -1524,12 +1534,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nails/module-email.git",
-                "reference": "0648b9f9c84c3dc828a5c773c7472a28745733f1"
+                "reference": "f91b749ef7d3451ac9dc6c67cf9ad21ad5a8f405"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nails/module-email/zipball/0648b9f9c84c3dc828a5c773c7472a28745733f1",
-                "reference": "0648b9f9c84c3dc828a5c773c7472a28745733f1",
+                "url": "https://api.github.com/repos/nails/module-email/zipball/f91b749ef7d3451ac9dc6c67cf9ad21ad5a8f405",
+                "reference": "f91b749ef7d3451ac9dc6c67cf9ad21ad5a8f405",
                 "shasum": ""
             },
             "require": {
@@ -1540,6 +1550,7 @@
                 "phpmailer/phpmailer": "^6.0"
             },
             "require-dev": {
+                "phpstan/phpstan": "0.*",
                 "phpunit/phpunit": "9.*"
             },
             "type": "library",
@@ -1592,7 +1603,7 @@
                 "Shed Collective",
                 "codeigniter"
             ],
-            "time": "2020-06-29T08:56:54+00:00"
+            "time": "2021-06-21T19:37:09+00:00"
         },
         {
             "name": "nails/nails",
@@ -1691,30 +1702,34 @@
         },
         {
             "name": "phpmailer/phpmailer",
-            "version": "v6.1.6",
+            "version": "v6.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPMailer/PHPMailer.git",
-                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3"
+                "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
-                "reference": "c2796cb1cb99d7717290b48c4e6f32cb6c60b7b3",
+                "url": "https://api.github.com/repos/PHPMailer/PHPMailer/zipball/a5b5c43e50b7fba655f793ad27303cd74c57363c",
+                "reference": "a5b5c43e50b7fba655f793ad27303cd74c57363c",
                 "shasum": ""
             },
             "require": {
                 "ext-ctype": "*",
                 "ext-filter": "*",
+                "ext-hash": "*",
                 "php": ">=5.5.0"
             },
             "require-dev": {
+                "dealerdirect/phpcodesniffer-composer-installer": "^0.7.0",
                 "doctrine/annotations": "^1.2",
-                "friendsofphp/php-cs-fixer": "^2.2",
-                "phpunit/phpunit": "^4.8 || ^5.7"
+                "phpcompatibility/php-compatibility": "^9.3.5",
+                "roave/security-advisories": "dev-latest",
+                "squizlabs/php_codesniffer": "^3.5.6",
+                "yoast/phpunit-polyfills": "^0.2.0"
             },
             "suggest": {
-                "ext-mbstring": "Needed to send email in multibyte encoding charset",
+                "ext-mbstring": "Needed to send email in multibyte encoding charset or decode encoded addresses",
                 "hayageek/oauth2-yahoo": "Needed for Yahoo XOAUTH2 authentication",
                 "league/oauth2-google": "Needed for Google XOAUTH2 authentication",
                 "psr/log": "For optional PSR-3 debug logging",
@@ -1751,11 +1766,11 @@
             "description": "PHPMailer is a full-featured email creation and transfer class for PHP",
             "funding": [
                 {
-                    "url": "https://github.com/synchro",
+                    "url": "https://github.com/Synchro",
                     "type": "github"
                 }
             ],
-            "time": "2020-05-27T12:24:03+00:00"
+            "time": "2021-06-16T14:33:43+00:00"
         },
         {
             "name": "pimple/pimple",
@@ -1954,6 +1969,101 @@
                 "response"
             ],
             "time": "2016-08-06T14:39:51+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "psr/simple-cache",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/simple-cache.git",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/simple-cache/zipball/408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "reference": "408d5eafb83c57f6365a3ca330ff23aa4a5fa39b",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\SimpleCache\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "http://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interfaces for simple caching",
+            "keywords": [
+                "cache",
+                "caching",
+                "psr",
+                "psr-16",
+                "simple-cache"
+            ],
+            "time": "2017-10-23T01:57:42+00:00"
         },
         {
             "name": "ralouphie/getallheaders",
@@ -3350,6 +3460,73 @@
             "time": "2020-06-29T13:22:24+00:00"
         },
         {
+            "name": "nails/driver-cdn-local",
+            "version": "dev-develop",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/nails/driver-cdn-local.git",
+                "reference": "b089ee46412083732f0629ef270cdbff70adbde4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/nails/driver-cdn-local/zipball/b089ee46412083732f0629ef270cdbff70adbde4",
+                "reference": "b089ee46412083732f0629ef270cdbff70adbde4",
+                "shasum": ""
+            },
+            "require": {
+                "nails/module-cdn": "dev-develop"
+            },
+            "require-dev": {
+                "phpstan/phpstan": "0.*",
+                "phpunit/phpunit": "9.*"
+            },
+            "type": "library",
+            "extra": {
+                "nails": {
+                    "name": "Local",
+                    "type": "driver",
+                    "subType": "storage",
+                    "forModule": "nails/module-cdn",
+                    "namespace": "Nails\\Cdn\\Driver\\Local\\",
+                    "data": {
+                        "namespace": "Nails\\Cdn\\Driver\\",
+                        "class": "Local"
+                    },
+                    "scripts": {
+                        "install": "./scripts/setup.sh"
+                    }
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Nails\\Cdn\\Driver\\": "src/",
+                    "Nails\\Cdn\\Driver\\Local\\": "src/Local/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Pablo de la Pena",
+                    "email": "p@nailsapp.co.uk",
+                    "homepage": "http://nailsapp.co.uk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "This is the \"Local\" driver for the Nails CDN module.",
+            "homepage": "http://nailsapp.co.uk/modules/cdn/driver/awslocal",
+            "keywords": [
+                "CDN Module",
+                "Nails",
+                "Shed Collective",
+                "codeigniter",
+                "driver"
+            ],
+            "time": "2021-05-21T08:40:25+00:00"
+        },
+        {
             "name": "phar-io/manifest",
             "version": "1.0.3",
             "source": {
@@ -3911,6 +4088,7 @@
             "keywords": [
                 "tokenizer"
             ],
+            "abandoned": true,
             "time": "2019-09-17T06:23:10+00:00"
         },
         {
@@ -4608,12 +4786,12 @@
             "version": "1.9.0",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "9dc4f203e36f2b486149058bade43c851dd97451"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/9dc4f203e36f2b486149058bade43c851dd97451",
                 "reference": "9dc4f203e36f2b486149058bade43c851dd97451",
                 "shasum": ""
             },
